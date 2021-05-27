@@ -1,0 +1,149 @@
+.single-vacancy-main{
+    .content-section{
+        background-color: $white;
+        color: $black;
+        padding-top: 0px;
+        .content-container{
+            .content-part{
+                padding: 20px 0px;
+                border-top: 1px solid $black;
+                background-color: $white;
+                z-index: 3;
+                position: relative;
+                cursor: pointer;
+                .title-container{
+                    display: grid;
+                    grid-template-columns: auto 45px;
+                    height: 35px;
+                    .content-title{
+                        margin: 0px;
+                        padding: 0px;
+                        &:before{
+                            display: none;
+                        }
+                    }
+                    .mobile-button{
+                        border-radius: 50%;
+                        border: 1px solid $black;
+                        position: relative;
+                        width: 35px;
+                        span{
+                            position: absolute;
+                            transition: 0.5s;
+                            background: $black;
+                            border-radius: 2px;
+                            &:first-child{
+                                top: 25%;
+                                bottom: 25%;
+                                width: 2px;
+                                left: 47.5%;
+                            }
+                            &:last-child{
+                                left: 25%;
+                                right: 25%;
+                                height: 2px;
+                                top: 45%;
+                            }
+                            &.minus{
+                                transform: rotate(90deg);
+                                &:last-child{
+                                    left: 50%;
+                                    right: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+                &:last-child{
+                    border-bottom: 1px solid $black;
+                }
+                .content-text{
+                    transform: scaleY(0);    
+                    transform-origin: top;
+                    transition: transform 0.26s ease;
+                    height: 0;
+                    opacity: 0;
+                    ul{
+                        padding-top: 20px;
+                        font-size: 16px;
+                        font-family: 'Gellix', sans-serif;
+                        font-weight: 400;
+                        color: $black;
+                        list-style-type: none;
+                        list-style-position: inside;
+                        li{
+                            padding-bottom: 10px;
+                            padding-left: 20px;
+                            text-indent: -10px;
+                            &:before{
+                                content: '-';  
+                                padding-right: 5px;
+                            }
+                        }
+                    }
+                    p{
+                        font-size: 16px;
+                        font-family: 'Gellix', sans-serif;
+                        font-weight: 400;
+                        color: $black;
+                        padding: 20px 0px;
+                    }
+                    &.show{
+                        transform: scaleY(1);
+                        height: 100%;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointLarge){
+    .single-vacancy-main{
+        .content-section{
+            .content-container{
+                .content-part{
+                    display: grid;
+                    grid-template-columns: 0.75fr 1.25fr;
+                    border: none !important;
+                    cursor: default;
+                    padding: 0px;
+                    .title-container{
+                        padding-top: 30px;
+                        .content-title{
+                            padding-bottom: 5px;
+                            &:before{
+                                display: block;
+                            }
+                        }
+                        .mobile-button{
+                            display: none;
+                        }
+                    }
+                    .content-text{
+                        height: 100%;
+                        opacity: 1;
+                        transform: none;
+                        transform-origin: unset;
+                        border-top: 1px solid $black;
+                        padding: 30px 0px;
+                        ul{
+                            padding: 0px;
+                        }
+                        &.show{
+                            transform: none;
+                            height: 100%;
+                            opacity: 1;
+                        }
+                    }
+                    &:last-child{
+                        .content-text{
+                            border-bottom: 1px solid $black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

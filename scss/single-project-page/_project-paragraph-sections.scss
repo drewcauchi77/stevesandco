@@ -1,0 +1,107 @@
+.single-project-main{
+    .description-section.project-paragraph-section, .short-description-section{
+        background: $white;
+         @media only screen and (min-width: $breakpointLarge){
+            padding-bottom: 60px;
+            .description-container{
+                display: grid;
+                grid-template-columns: 0.75fr 1.25fr;
+
+                .description-text{
+
+                }
+            }
+        }
+    }
+
+    .project-paragraph-section{
+        display: none;
+    }
+
+    .short-description-section{
+        display: block;
+         @media only screen and (min-width: $breakpointLarge){
+            padding-bottom: 0;
+
+            p{
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    .read-more-project{
+        background: $white;
+        padding-top: 50px;
+
+        @media only screen and (min-width: $breakpointLarge){
+          padding-top: 100px;   
+        }
+
+        &.no-space{
+            padding-top: 0px; 
+        }
+        
+       
+        .container{
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            position: relative;
+            overflow: hidden;
+
+            .arrow-button{
+                cursor: pointer;
+                background: $white;
+                position: relative;
+                overflow: hidden;
+                font-size: 16px;
+                font-family: 'Gellix', sans-serif;
+                font-weight: 500;
+                color: $blue;
+                .arrow-right{
+                    border: solid $blue;
+                    border-width: 0 2px 2px 0;
+                    display: inline-block;
+                    padding: 3px;
+                    transform: rotate(-45deg);
+                    -webkit-transform: rotate(-45deg);
+                    margin-left: -12px;
+                    margin-right: 10px;
+                    text-decoration: none;
+                }
+                &:before{
+                    background-color: $blue;
+                    content: "";
+                    display: inline-block;
+                    height: 2px;
+                    position: relative;
+                    vertical-align: middle;
+                    width: 50px;
+                    transition: 0.5s all;
+                }
+                &:hover{
+                    .button-text{
+                        text-decoration: underline;
+                    }
+                    &:before{
+                        width: 75px;
+                    }
+                }
+            }
+
+            .section-separator{
+                border: 1px solid $black;
+                height: 1px;
+                position: absolute;
+                right: 0;
+                left: 240px;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                margin: auto;
+            }
+        }
+    }
+   
+}
+
+

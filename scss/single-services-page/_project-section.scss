@@ -1,0 +1,24 @@
+.single-service-main{
+   
+    .single-project{
+        max-width: 100%;
+    }
+
+    .priority-section{
+        background: $white;
+    }
+
+    .no-pad-btm{
+        padding-bottom: 0 !important;
+    }
+}
+
+
+@media only screen and (min-width: $breakpointMedium){
+    .single-service-main{
+        .post-content{
+            width: 85%;
+            margin: 0 auto;
+        }
+    }
+}

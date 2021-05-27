@@ -1,0 +1,181 @@
+.careers-main{
+    .listings-section{
+        background-color: $white;
+        .listings-container{
+            .listings-title{
+                color: $black;
+            }
+            .listings-text{
+                color: $black;
+                padding-bottom: 15px;
+                a{
+                    color: $blue;
+                    display: inline;
+                    position: relative;
+                    overflow: hidden;
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        width: 0;
+                        bottom: -5px;
+                        background: $blue;
+                        height: 1px;
+                        transition-property: width;
+                        transition-duration: 0.3s;
+                        transition-timing-function: ease-out;
+                    }
+                    &:hover{
+                        &:after{
+                            left: 0;
+                            right: auto;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .listings{
+                .single-listing{
+                    a{
+                        display: grid;
+                        grid-template-columns: auto 75px;
+                        grid-column-gap: 20px;
+                        padding: 20px 0px;
+                        border-top: 1px solid $black;
+                        .single-listing-title{
+                            color: $blue;
+                        }
+                        .single-listing-button{
+                            overflow: hidden;
+                            font-size: 16px;
+                            font-family: 'Gellix', sans-serif;
+                            font-weight: 500;
+                            color: $blue;
+                            position: relative;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            margin: auto;
+                            .arrow-right{
+                                border: solid $blue;
+                                border-width: 0 2px 2px 0;
+                                display: inline-block;
+                                padding: 3px;
+                                transform: rotate(-45deg);
+                                -webkit-transform: rotate(-45deg);
+                                margin-left: -12px;
+                                margin-right: 10px;
+                                text-decoration: none;
+                            }
+                            .single-listing-button-text{
+                                display: none;
+                            }
+                            &:before{
+                                background-color: $blue;
+                                content: "";
+                                display: inline-block;
+                                height: 2px;
+                                position: relative;
+                                vertical-align: middle;
+                                width: 50px;
+                                transition: 0.5s all;
+                            }
+                        }
+                        &:hover{
+                            .single-listing-button{
+                                .single-listing-button-text{
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                    &:last-child{
+                        a{
+                            border-bottom: 1px solid $black;
+                        }
+                    }
+                }
+                .no-listings{
+                    color: $black;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointMedium){
+    .careers-main{
+        .listings-section{
+            .listings-container{
+                .listings{
+                    .single-listing{
+                        a{
+                            grid-template-columns: auto 115px;
+                            .single-listing-button{
+                                margin: 0;
+                            }
+                            &:hover{
+                                .single-listing-button{
+                                    &:before{
+                                        width: 75px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointLarge){
+    .careers-main{
+        .listings-section{
+            .listings-container{
+                display: grid;
+                grid-template-columns: 0.6fr 1.4fr;
+                grid-template-areas: 'title sectiontext'
+                    'title listings';
+                .listings-title{
+                    grid-area: title;
+                }
+                .listings-text{
+                    grid-area: sectiontext;
+                }
+                .listings{
+                    grid-area: listings;
+                    .single-listing{
+                        a{
+                            grid-template-columns: auto 200px;
+                            padding: 40px 0px;
+                            .single-listing-button{
+                                .single-listing-button-text{
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointXLarge){
+    .careers-main{
+        .listings-section{
+            .listings-container{
+                .listings{
+                    .single-listing{
+                        a{
+                            .single-listing-title{
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

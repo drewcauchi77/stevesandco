@@ -1,0 +1,175 @@
+.homepage-main{
+    section{
+        position: relative;
+    }
+    .background-video{
+        z-index: -1;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        object-fit: cover;
+        height: 100vh;
+        width: 100vw;
+    }
+    .introduction-outer-container{
+        .inner-section{
+            padding-top: 110px;
+            background-color: rgba(16, 16, 16, 0.9);
+            height: 75vh;
+            .introduction-container{
+                height: 100%;
+                position: relative;
+                .title{
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    height: fit-content;
+                }
+            }
+        }
+        .showreel-section{
+            position: fixed;
+            bottom: 20px;
+            right: 0;
+            .introduction-special-container{
+                display: grid;
+                grid-template-columns: 100px 60px;
+                width: 180px;
+                grid-column-gap: 20px;
+                .play-text{
+                    align-self: center;
+                    color: $white;
+                    font-size: 16px;
+                    font-family: 'Gellix', sans-serif;
+                    font-weight: 500;
+                }
+                .play-button{
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    border: 2px solid $white;
+                    position: relative;
+                    cursor: pointer;
+                    background: linear-gradient(to left, transparent 50%, $white 50%) right;
+                    background-size: 200%;
+                    transition: .5s ease-out;
+                    .triangle-button{
+                        width: 0;
+                        height: 14px !important;
+                        border-style: solid;
+                        border-width: 7px 0 7px 12.1px;
+                        border-color: transparent transparent transparent $white;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        height: fit-content;
+                        transition: left ease 0.5s;
+                    }
+                    &:hover{
+                        background-position: left;
+                        .triangle-button{
+                            border-color: transparent transparent transparent $blue;
+                        }
+                        .first-tri{
+                            left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .spacer-container{
+            height: 100vh;
+        }
+        .full-video-overlay{
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: auto;
+            margin: auto;
+            background-color: rgba(16, 16, 16, 0.9);
+            z-index: 999;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.5s linear;
+            .video-inner-container{
+                width: 90%;
+                max-width: 1340px;
+                margin: 0 auto;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                height: fit-content;
+                .close-button{
+                    display: none;
+                    margin-bottom: 30px;
+                    float: right;
+                    cursor: pointer;
+                    .close-symbol{
+                        font-size: 32px;
+                        color: white;
+                    }
+                }
+                video{
+                    width: 100%;
+                }
+            }
+            &.show{
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointMedium){
+    .homepage-main{
+        .introduction-outer-container{
+            .full-video-overlay{
+                .video-inner-container{
+                    .close-button{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointLarge){
+    .homepage-main{
+        .introduction-outer-container{
+            .inner-section{
+                .introduction-container{
+                    .title{
+                        width: 80%;
+                        right: auto;
+                    }
+                }
+            }
+            .showreel-section{
+                bottom: 50px;
+                .introduction-special-container{
+                    grid-template-columns: 120px 60px;
+                    width: 200px;
+                    .play-text{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

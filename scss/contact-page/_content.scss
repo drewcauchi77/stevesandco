@@ -1,0 +1,57 @@
+.contact-main{
+    .contact-section{
+        background-color: $white;
+        .contact-container{
+            .map-section{
+                iframe{
+                    height: 300px;
+                    width: 100%;
+                }
+            }
+            .contact-details-section{
+                padding-top: 40px;
+                color: $black;
+                .phone-section{
+                    .phone-content{
+                        p{
+                            padding: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointMedium){
+    .contact-main{
+        .contact-section{
+            background-color: $white;
+            .contact-container{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-column-gap: 70px;
+                .map-section{
+                    iframe{
+                        height: 100%;
+                    }
+                }
+                .contact-details-section{
+                    padding-top: 0px;
+                    align-self: center;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointLarge){
+    .contact-main{
+        .contact-section{
+            .contact-container{
+                grid-column-gap: 120px;
+                height: 500px;
+            }
+        }
+    }
+}

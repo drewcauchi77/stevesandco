@@ -1,0 +1,234 @@
+.single-vacancy-main{
+    .form-section{
+        background-color: $black;
+        .form-container{
+            .form-title{
+                color: $white;
+                &:before{
+                    border-color: $white;
+                }
+            }
+            .vacancy-form{
+                padding-top: 15px;
+                color: $black;
+                .wpcf7{
+                    form{
+                        .form-group{
+                            padding-bottom: 30px;
+                            br{
+                                display: none;
+                            }
+                            .wpcf7-form-control-wrap{
+                                width: 100%;
+                                input[type=text], input[type=url], input[type=email], input[type=tel]{
+                                    width: 100%;
+                                    border: none;
+                                    border-bottom: 1px solid rgba(256, 256, 256, 0.6);
+                                    border-radius: 0;
+                                    padding: 8px 12px;
+                                    font-size: 16px;
+                                    font-family: 'Gellix', sans-serif;
+                                    font-weight: 400;
+                                    color: $white;
+                                    background-color: $black;
+                                    &:focus{
+                                        outline: none;
+                                        border-bottom: 1px solid $white;
+                                    }
+                                }
+                                .wpcf7-not-valid-tip{
+                                    font-size: 16px;
+                                    font-family: 'Gellix', sans-serif;
+                                    font-weight: 500;
+                                }
+                            }
+                            label{
+                                display: none;
+                            }
+                        }
+                        .uploads{
+                            display: grid;
+                            grid-template-columns: repeat(2, minmax(auto, 150px));
+                            grid-column-gap: 40px;
+                            justify-content: center;
+                            padding-top: 10px;
+                            .file-upload-group{
+                                display: grid;
+                                grid-template-rows: 150px auto;
+                                grid-row-gap: 20px;
+                                grid-template-areas: 'inputfield'
+                                    'labelname';
+                                max-width: 150px;
+                                label{
+                                    display: block;
+                                    color: $white;
+                                    grid-area: labelname;
+                                    font-size: 16px;
+                                    font-family: 'Gellix', sans-serif;
+                                    font-weight: 400;
+                                    width: 90%;
+                                    margin: 0 auto;
+                                    text-align: center;
+                                }
+                                .wpcf7-form-control-wrap{
+                                    grid-area: inputfield;
+                                    padding: 5px 10px;
+                                    background: $blue;
+                                    border: 1px solid $blue;
+                                    position: relative;
+                                    color: $white;
+                                    border-radius: 2px;
+                                    text-align: center;
+                                    float: left;
+                                    cursor: pointer;
+                                    word-wrap: break-word;
+                                    &:after{
+                                        content: '+';
+                                        position: absolute;
+                                        top: 0;
+                                        bottom: 0;
+                                        left: 0;
+                                        right: 0;
+                                        margin: auto;
+                                        font-size: 120px;
+                                        line-height: 115px;
+                                        transition: 0.5s all;
+                                        display: block;
+                                        height: 100%;
+                                        width: 100%;
+                                    }
+                                    &:hover{
+                                        &:after{
+                                            transform: scale(1.1);
+                                        }
+                                    }
+                                    input{
+                                        position: absolute;
+                                        z-index: 1000;
+                                        opacity: 0;
+                                        cursor: pointer;
+                                        right: 0;
+                                        top: 0;
+                                        height: 100%;
+                                        font-size: 24px;
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                        .submit-button{
+                            margin-top: 20px;
+                            overflow: hidden;
+                            font-size: 16px;
+                            font-family: 'Gellix', sans-serif;
+                            font-weight: 500;
+                            color: $white;
+                            width: fit-content;
+                            cursor: pointer;
+                            .arrow-right{
+                                border: solid $white;
+                                border-width: 0 2px 2px 0;
+                                display: inline-block;
+                                padding: 3px;
+                                transform: rotate(-45deg);
+                                -webkit-transform: rotate(-45deg);
+                                margin-left: -12px;
+                                margin-right: 10px;
+                                text-decoration: none;
+                            }
+                            .submit-button-text{
+                                display: inline-block;
+                            }
+                            br{
+                                display: none;
+                            }
+                            &:before{
+                                background-color: $white;
+                                content: "";
+                                display: inline-block;
+                                height: 2px;
+                                position: relative;
+                                vertical-align: middle;
+                                width: 50px;
+                                transition: 0.5s all;
+                            }
+                            &:hover{
+                                .button-text{
+                                    text-decoration: underline;
+                                }
+                                &:before{
+                                    width: 75px;
+                                }
+                            }
+                        }
+                        .form-submit-group{
+                            display: none;
+                        }
+                        .wpcf7-response-output{
+                            margin-left: 0;
+                            margin-right: 0;
+                            font-size: 16px;
+                            font-family: 'Gellix', sans-serif;
+                            font-weight: 500;
+                            color: $white;
+                            border-color: $white;
+                            height: fit-content;
+                            max-width: fit-content;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+@media only screen and (min-width: $breakpointLarge){
+    .single-vacancy-main{
+        .form-section{
+            .form-container{
+                .vacancy-form{
+                    .wpcf7{
+                        form{
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            grid-column-gap: 30px;
+                            grid-template-areas: 'namegroup uploads'
+                                'emailgroup uploads'
+                                'phonegroup uploads'
+                                'websitegroup uploads'
+                                'submitbutton submitbutton'
+                                'response response';
+                            .name-group{
+                                grid-area: namegroup;
+                            }
+                            .email-group{
+                                grid-area: emailgroup;
+                            }
+                            .phone-group{
+                                grid-area: phonegroup;
+                            }
+                            .website-group{
+                                grid-area: websitegroup;
+                            }
+                            .uploads{
+                                grid-area: uploads;
+                                padding: 0px;
+                                align-self: center;
+                                .file-upload-group{
+                                    padding-bottom: 0px;
+                                }
+                            }
+                            .submit-button{
+                                grid-area: submitbutton;
+                            }
+                            .wpcf7-response-output{
+                                grid-area: response;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

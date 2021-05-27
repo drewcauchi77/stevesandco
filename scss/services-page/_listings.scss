@@ -1,0 +1,172 @@
+.services-main{
+    .services-section{
+        background-color: $white;
+        .services-container{
+            .aside-navigation{
+                display: none;
+            }
+            .services-listings{
+                .single-service{
+                    padding-bottom: 40px;
+                    width: 100%;
+                    overflow-x: hidden;
+                    overflow-y: hidden;
+                    .service-title{
+                        font-size: 38px;
+                        font-family: "Gellix",sans-serif;
+                        font-weight: 600;
+                        padding-bottom: 30px;
+                        color: $blue;
+                    }
+                    .service-button{
+                        margin-bottom: 30px;
+                    }
+                    .service-image-gallery{
+                        cursor: grab;
+                        &.grabbing{
+                            cursor: grabbing;
+                        }
+                        .slick-list{
+                            margin: 0px -4px;
+                            .slick-track{
+                                .slick-slide{
+                                    outline: none;
+                                    margin: 20px 4px;
+                                    padding: 10px 0px;
+                                    height: 400px;
+                                    object-fit: cover;
+                                }
+                                .slick-current{
+                                    padding: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointMedium){
+    .services-main{
+        .services-section{
+            .services-container{
+                .services-listings{
+                    .single-service{
+                        .service-title{
+                            font-size: 58px;
+                        }
+                        .service-image-gallery{
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            grid-column-gap: 30px;
+                            .single-image{
+                                height: 100%;
+                                width: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointLarge){
+    .services-main{
+        .services-section{
+            .services-container{
+                display: grid;
+                grid-template-columns: 0.6fr 1.4fr;
+                width: 85%;
+                margin: 0 auto;
+                max-width: 1364px;
+                .aside-navigation{
+                    display: block;
+                    position: sticky;
+                    top: 0;
+                    height: fit-content;
+                    padding-top: 40px;
+                    .same-page-navigation{
+                        a{
+                            font-size: 20px;
+                            padding: 10px 0px;
+                            font-family: "Gellix",sans-serif;
+                            font-weight: 500;
+                            margin: 0px;
+                            color: rgba(16, 16, 16, 0.6);
+                            display: block;
+                            transition: 0.5s all;
+                            &:hover{
+                                color: $black;
+                            }
+
+                            &.active{
+                                color: $blue;
+                            }
+                        }
+                    }
+                }
+                .services-listings{
+                    .single-service{
+                        padding-bottom: 50px;
+                        .service-title{
+                            width: 100%;
+                            max-width: none;
+                        }
+                        .service-content{
+                            width: 100%;
+                            max-width: none;
+                        }
+                        .service-button{
+                            width: 100%;
+                            max-width: none;
+                            margin-bottom: 50px;
+                        }
+                        .service-image-gallery{
+                            grid-column-gap: 50px;
+                            cursor: default;
+                            &.grabbing{
+                                cursor: default;
+                            }
+                            .single-image{
+                                &:last-child{
+                                    height: 90%;
+                                    align-self: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointXLarge){
+    .services-main{
+        .services-section{
+            .services-container{
+                .services-listings{
+                    .single-service{
+                        .service-image-gallery{
+                            .single-image{
+                                height: 500px;
+                                &:last-child{
+                                    height: 500px !important;
+                                    position: absolute;
+                                    width: auto;
+                                    height: auto;
+                                    right: 10%;
+                                    padding: 25px 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,264 @@
+.showreel-nav{
+    background: $white;
+    height: 70px;
+    position: relative;
+
+    @media only screen and (min-width: $breakpointLarge){
+       height: 50px;
+    }
+
+    .o-play-btn {
+        text-align: center;
+        height: 30px;
+        width: 30px;
+        padding: 0;
+        left: 20px;
+        border-radius: 30px;
+        background: transparent;
+        border: none;
+        outline: none;
+        position: absolute;
+        left: 20px;
+        top: 10px;
+
+        &__icon {
+            $size: 16px;
+            height: $size;
+            width: $size;
+            line-height: $size;
+            position: relative;
+            z-index: 0;
+            box-sizing: border-box;
+            display: inline-block;
+            overflow: hidden;
+    
+            &:before, &:after {
+                content: '';
+                position: absolute;
+                transition: 0.3s;
+                background: $blue;
+                height: 100%;
+                width: 50%;
+                top: 0;
+            }
+    
+            &:before {
+                left: 0;
+            }
+    
+            &:after {
+                right: 0;
+            }
+        }
+    
+        &__mask {
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+    
+            &:before, &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                height: 100%;
+                width: 150%;
+                background: $white;
+                transition: all 0.3s ease-out;
+            }
+    
+            &:before {
+                top: -100%;
+                transform-origin: 0% 100%;
+                transform: rotate(26.5deg);
+            }
+    
+            &:after {
+                transform-origin: 0% 0%;
+                transform: rotate(-26.5deg);
+                top: 100%;
+            }
+        }
+    
+        &--playing {
+    
+            .o-play-btn {
+    
+                &__icon {
+    
+                    &:before {
+                        transform: translateX(-25%);
+                    }
+    
+                    &:after {
+                        transform: translateX(25%);
+                    }
+                }
+    
+                &__mask {
+    
+                    &:before, &:after {
+                        transform: rotate(0);
+                    }
+                }
+            }
+        }
+    }
+
+    .fullscreenbtn {
+       background: white;
+       color: $blue;
+       border: 2px solid currentColor;
+       width: 17px;
+       height: 17px;
+       position: absolute;
+       right: 20px;
+       top: 15px;
+    
+     &:before, &:after {
+       content: '';
+       background: white;
+       position: absolute;
+     }
+     &:before {
+        width: .333em;
+        height: 26px;
+        left: .233em;
+        top: -3px;
+     }
+     &:after {
+       width: 20px;
+       height: .333em;
+       top: .233em;
+       left: -.1em;
+     }
+    }
+
+    .vid-duration{
+        display: grid;
+        grid-template-areas: 'slider timer';
+        grid-template-columns: 1fr 100px;
+        grid-column-gap: 20px;
+        width: 100%;
+        margin: 0 20px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: auto;
+        bottom: 3px;
+        height: 30px;
+
+
+        @media only screen and (min-width: $breakpointLarge){
+            top: 0;
+            bottom: 0;
+            grid-template-columns: 300px 100px;
+            width: 400px;
+            margin: auto;
+        }
+
+        .seekslider{
+            grid-area: slider;
+            margin: auto;
+            appearance: none;
+            height: 0px;
+            outline: none;
+            border-radius: 20px;
+            background: rgb(161, 161, 161);
+            border: none;
+            transition: all 0.4s ease;
+            padding: 3px 0;
+            width: 100%;
+
+            @media only screen and (min-width: $breakpointLarge){
+                width: 90%;
+            }
+    
+            &::-webkit-slider-thumb{
+                appearance: none;
+                width: 1.5rem;
+                height: 1.5rem;
+                background-color: $blue;
+                border: 2px solid $white;
+                border-radius: 1rem;
+                cursor: pointer;
+            }
+        }
+        .time-sec{
+            grid-area: timer;
+            margin: auto;
+            font-family: 'Gellix', sans-serif;
+            font-size: 10px;
+            width: 100px;
+            position: absolute;
+            right: 0px;
+            top: 7px;
+
+            @media only screen and (min-width: $breakpointLarge){
+                font-size: 14px;
+                top: 4px;
+            }
+        }
+    }
+
+    .volume, .mute{
+        width: 22px;
+        height: 20px;
+        position: absolute;
+        bottom: 0;
+        left: 61px;
+        margin: 0 auto;
+        top: 15px;
+
+        @media only screen and (min-width: $breakpointLarge){
+            margin: auto;
+            top: 0;
+        }
+    }
+
+    .mute{
+        display: none;
+    }
+
+
+    .volumeslider{
+        display: none;
+        margin: auto;
+        appearance: none;
+        height: 0px;
+        outline: none;
+        border-radius: 20px;
+        background: rgb(161, 161, 161);
+        border: none;
+        transition: all 0.4s ease;
+        padding: 3px 0;
+        width: 100px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 100px;
+
+        &::-webkit-slider-thumb{
+            appearance: none;
+            width: 1.5rem;
+            height: 1.5rem;
+            background-color: $white;
+            border: 2px solid $blue;
+            border-radius: 1rem;
+            cursor: pointer;
+        }
+
+        @media only screen and (min-width: $breakpointLarge){
+            display: block;
+        }
+    }
+
+    
+    
+}
+
+
+

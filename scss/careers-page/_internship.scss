@@ -1,0 +1,52 @@
+.careers-main{
+    .internship-section{
+        background-color: $black;
+        .internship-container{
+            .internship-title{
+                color: $white;
+                &:before{
+                    border-color: $white;
+                }
+            }
+            .internship-text{
+                color: $white;
+                a{
+                    color: $blue;
+                    display: inline;
+                    position: relative;
+                    overflow: hidden;
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        width: 0;
+                        bottom: -5px;
+                        background: $white;
+                        height: 1px;
+                        transition-property: width;
+                        transition-duration: 0.3s;
+                        transition-timing-function: ease-out;
+                    }
+                    &:hover{
+                        &:after{
+                            left: 0;
+                            right: auto;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointLarge){
+    .careers-main{
+        .internship-section{
+            .internship-container{
+                display: grid;
+                grid-template-columns: 0.6fr 1.4fr;
+            }
+        }
+    }
+}

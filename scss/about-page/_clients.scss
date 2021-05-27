@@ -1,0 +1,47 @@
+.about-main{
+    .clients-section{
+        background-color: $black;
+        .clients-container{
+            .clients-title{
+                color: $white;
+                &:before{
+                    border-color: $white;
+                }
+            }
+            .clients-text{
+                color: $white;
+            }
+        }
+        .first-row{
+            .image-slideshow-row{
+                animation: marqueeToLeft 40s linear infinite;
+            }
+        }
+        .second-row{
+            .image-slideshow-row{
+                animation: marqueeToRight 40s linear infinite;
+            }
+        }
+        .infinite-slideshow-gallery{
+            &:after{
+                background: linear-gradient(to right, $black, rgba($black, 0) 40px, rgba($black, 0) calc(100% - 40px), $black);
+            }
+            &:hover{
+                .image-slideshow-row{
+                    animation-play-state: paused;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointLarge){
+    .about-main{
+        .clients-section{
+            .clients-container{
+                display: grid;
+                grid-template-columns: 0.6fr 1.4fr;
+            }
+        }
+    }
+}

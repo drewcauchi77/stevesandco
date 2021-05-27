@@ -1,0 +1,212 @@
+.site-footer{
+    background-color: $black;
+    width: 100%;
+    position: relative;
+    .footer-container{
+        .footer-title{
+            margin-bottom: 30px;
+            a{
+                display: grid;
+                grid-template-columns: minmax(auto, 350px) auto;
+                grid-column-gap: 10px;
+                width: fit-content;
+                .title{
+                    font-size: 38px;
+                    font-family: 'Gellix', sans-serif;
+                    font-weight: 600;
+                    color: $white;
+                    margin: 0px;
+                    display: inline-block;
+                }
+                .arrow-image{
+                    align-self: center;
+                    position: relative;
+                    transition: 0.5s all;
+                }
+                &:hover{
+                    .title{
+                        -webkit-text-fill-color: $black; /* Will override color (regardless of order) */
+                        -webkit-text-stroke-width: 1px;
+                        -webkit-text-stroke-color: $white;
+                    }
+                    .arrow-image{
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+        .contact-section{
+            max-width: 250px;
+            .contact-title{
+                font-size: 20px;
+                font-family: 'Gellix', sans-serif;
+                font-weight: 500;
+                margin: 0px;
+                padding-bottom: 30px;
+                color: $white;
+            }
+            .contact-text{
+                font-size: 16px;
+                font-family: "Gellix",sans-serif;
+                font-weight: 500;
+                color: $white;
+            }
+        }
+        .footer-navigation{
+            max-width: 150px;
+            padding: 35px 0px;
+            border-top: 1px solid $white;
+            .footer-navigation-list{
+                li{
+                    padding-bottom: 10px;
+                    a{
+                        font-size: 16px;
+                        font-family: "Gellix",sans-serif;
+                        font-weight: 500;
+                        color: $white;
+                    }
+                }
+            }
+        }
+        .social-section{
+            max-width: 150px;
+            padding: 35px 0px;
+            border-top: 1px solid $white;
+            .social-navigation-list{
+                li{
+                    display: inline-block;
+                    margin-right: 15px;
+                    a{
+                        img{
+                            transition: 0.5s all;
+                        }
+                        &:hover{
+                            img{
+                                transform: scale(1.2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .bottom-navigation{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 10px;
+            max-width: 450px;
+            .bottom-section{
+                span{
+                    font-size: 12px;
+                    font-family: "Gellix",sans-serif;
+                    font-weight: 400;
+                    color: $white;
+                }
+            }
+            .copyright-section{
+                justify-self: end;
+                width: fit-content;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointSmall){
+    .site-footer{
+        .footer-container{
+            .bottom-navigation{
+                .bottom-section{
+                    span{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointMedium){
+    .site-footer{
+        .footer-container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: 'title title'
+                'contact navigation'
+                'contact social'
+                'bottomnav bottomnav';
+            grid-gap: 35px 50px;
+            .footer-title{
+                grid-area: title;
+                a{
+                    grid-template-columns: minmax(auto, 530px) auto;
+                    grid-column-gap: 20px;
+                    .title{
+                        font-size: 58px;
+                    }
+                }
+            }
+            .contact-section{
+                grid-area: contact;
+                .contact-title{
+                    font-size: 24px;
+                }
+            }
+            .footer-navigation{
+                grid-area: navigation;
+                padding: 0px;
+                border-top: none;
+            }
+            .social-section{
+                grid-area: social;
+            }
+            .bottom-navigation{
+                grid-area: bottomnav;
+                justify-self: end;
+                grid-template-columns: 250px 250px;
+                max-width: none;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointLarge){
+    .site-footer{
+        .footer-container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: 'title title title'
+                'contact navigation social'
+                'bottomnav bottomnav bottomnav';
+            grid-gap: 50px;
+            .contact-section{
+                max-width: 350px;
+            }
+            .footer-navigation{
+                justify-self: center;
+                width: 150px;
+                padding-top: 35px;
+                border-top: 1px solid $white;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointXLarge){
+    .site-footer{
+        .footer-container{
+            .contact-section{
+                .contact-title{
+                    padding-bottom: 50px; 
+                }
+            }
+            .footer-navigation{
+                .footer-navigation-list{
+                    li{
+                        a{
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

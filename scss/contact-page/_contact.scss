@@ -1,0 +1,294 @@
+.contact-main{
+    .form-section{
+        padding-top: 0px;
+        background-color: $white;
+        .form-container{
+            .form-title{
+                font-size: 38px;
+                font-family: 'Gellix', sans-serif;
+                font-weight: 600;
+                color: $blue;
+                margin: 0px;
+                padding-bottom: 30px;
+            }
+            .form-text{
+                p{
+                    color: $black;
+                    a{
+                        color: $blue;
+                        display: inline;
+                        position: relative;
+                        overflow: hidden;
+                        &:after{
+                            content: "";
+                            position: absolute;
+                            right: 0;
+                            width: 0;
+                            bottom: -5px;
+                            background: $blue;
+                            height: 1px;
+                            transition-property: width;
+                            transition-duration: 0.3s;
+                            transition-timing-function: ease-out;
+                        }
+                        &:hover{
+                            &:after{
+                                left: 0;
+                                right: auto;
+                                width: 100%;
+                            }
+                        }
+                    }
+                    &:first-child{
+                        padding-bottom: 20px;
+                    }
+                }
+            }
+            .contact-form{
+                padding-top: 15px;
+                color: $black;
+                .wpcf7{
+                    form{
+                        .form-section-title{
+                            font-size: 16px;
+                            padding: 20px 0px;
+                        }
+                        .form-group{
+                            padding-bottom: 30px;
+                            br{
+                                display: none;
+                            }
+                            .wpcf7-form-control-wrap{
+                                width: 100%;
+                                .wpcf7-checkbox{
+                                    .wpcf7-list-item{
+                                        position: relative;
+                                        margin: 0px 15px 15px 0px;
+                                        input[type=checkbox]{
+                                            position: absolute;
+                                            width: 100%;
+                                            top: 0;
+                                            bottom: 0;
+                                            left: 0;
+                                            right: 0;
+                                            height: 100%;
+                                            opacity: 0;
+                                            z-index: 1;
+                                            cursor: pointer;
+                                        }
+                                        .wpcf7-list-item-label{
+                                            display: block;
+                                            padding: 8px 8px 8px 16px;
+                                            border: 1px solid rgba(16, 16, 16, 0.6);
+                                            font-size: 16px;
+                                            font-family: 'Gellix', sans-serif;
+                                            font-weight: 400;
+                                            color: rgba(16, 16, 16, 0.6);
+                                            transition: 0.5s all;
+                                            &:before{
+                                                content: '';
+                                                display: inline-block;
+                                                width: 4px;
+                                                height: 4px;
+                                                -moz-border-radius: 7.5px;
+                                                -webkit-border-radius: 7.5px;
+                                                border-radius: 7.5px;
+                                                background-color: rgba(16, 16, 16, 0.6);
+                                                margin: 0;
+                                                position: absolute;
+                                                top: 50%;
+                                                -ms-transform: translateY(-50%);
+                                                transform: translateY(-50%);
+                                                left: 10px;
+                                                transition: 0.5s all;
+                                            }
+                                            &.selected{
+                                                border-color: $blue;
+                                                background-color: $blue;
+                                                color: $white;
+                                                &:before{
+                                                    background-color: $white;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                input[type=text], input[type=url], input[type=email], textarea{
+                                    width: 100%;
+                                    border: none;
+                                    border-bottom: 1px solid rgba(16, 16, 16, 0.6);
+                                    border-radius: 0;
+                                    padding: 8px 12px;
+                                    font-size: 16px;
+                                    font-family: 'Gellix', sans-serif;
+                                    font-weight: 400;
+                                    color: $black;
+                                    &:focus{
+                                        outline: none;
+                                        border-bottom: 1px solid $black;
+                                    }
+                                }
+                                textarea{
+                                    border: 1px solid rgba(16, 16, 16, 0.6);
+                                    height: 120px;
+                                }
+                                .wpcf7-not-valid-tip{
+                                    font-size: 16px;
+                                    font-family: 'Gellix', sans-serif;
+                                    font-weight: 500;
+                                }
+                            }
+                            label{
+                                display: none;
+                                padding-bottom: 15px;
+                                font-size: 16px;
+                                font-family: 'Gellix', sans-serif;
+                                font-weight: 400;
+                                color: rgba(16, 16, 16, 0.6);
+                                &.show{
+                                    display: block !important;
+                                }
+                            }
+                            &:not(.form-group-checkbox){
+                                .wpcf7-not-valid-tip{
+                                    margin-top: 15px;
+                                }
+                            }
+                        }
+                        .form-group-checkbox{
+                            padding-bottom: 15px;
+                        }
+                        .submit-button{
+                            margin-top: 20px;
+                            overflow: hidden;
+                            font-size: 16px;
+                            font-family: 'Gellix', sans-serif;
+                            font-weight: 500;
+                            color: $black;
+                            width: fit-content;
+                            cursor: pointer;
+                            .arrow-right{
+                                border: solid $black;
+                                border-width: 0 2px 2px 0;
+                                display: inline-block;
+                                padding: 3px;
+                                transform: rotate(-45deg);
+                                -webkit-transform: rotate(-45deg);
+                                margin-left: -12px;
+                                margin-right: 10px;
+                                text-decoration: none;
+                            }
+                            .submit-button-text{
+                                display: inline-block;
+                            }
+                            br{
+                                display: none;
+                            }
+                            &:before{
+                                background-color: $black;
+                                content: "";
+                                display: inline-block;
+                                height: 2px;
+                                position: relative;
+                                vertical-align: middle;
+                                width: 50px;
+                                transition: 0.5s all;
+                            }
+                            &:hover{
+                                .button-text{
+                                    text-decoration: underline;
+                                }
+                                &:before{
+                                    width: 75px;
+                                }
+                            }
+                        }
+                        .form-submit-group{
+                            display: none;
+                        }
+                        .wpcf7-response-output{
+                            margin-left: 0;
+                            margin-right: 0;
+                            font-size: 16px;
+                            font-family: 'Gellix', sans-serif;
+                            font-weight: 500;
+                            color: $black;
+                            border-color: $black;
+                            height: fit-content;
+                            max-width: fit-content;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointMedium){
+    .contact-main{
+        .form-section{
+            .form-container{
+                .form-title{
+                    font-size: 58px;
+                }
+                .contact-form{
+                    form{
+                        .form-section-title{
+                            font-size: 16px;
+                            padding-bottom: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointLarge){
+    .contact-main{
+        .form-section{
+            .form-container{
+                .wpcf7{
+                    form{
+                        .form-group{
+                            .wpcf7-form-control-wrap{
+                                .wpcf7-checkbox{
+                                    .wpcf7-list-item{
+                                        &:hover{
+                                            .wpcf7-list-item-label{
+                                                border-color: $blue;
+                                                color: $blue;
+                                                &:before{
+                                                    background-color: $blue;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointXLarge){
+    .contact-main{
+        .form-section{
+            .form-container{
+                .contact-form{
+                    .wpcf7{
+                        form{
+                            .form-section-title{
+                                font-size: 20px;
+                                padding-bottom: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

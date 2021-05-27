@@ -1,0 +1,24 @@
+.about-main{
+    .about-section{
+        background-color: $white;
+        .about-container{
+            .about-title{
+                color: $black;
+            }
+            .about-text{
+                color: $black;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointLarge){
+    .about-main{
+        .about-section{
+            .about-container{
+                display: grid;
+                grid-template-columns: 0.6fr 1.4fr;
+            }
+        }
+    }
+}

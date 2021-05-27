@@ -1,0 +1,98 @@
+html{
+    scroll-behavior: smooth;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    &.stop-scroll{
+        overflow-y: hidden;
+    }
+}
+
+.post, .page {
+    margin: 0px;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:active, a:focus, a{
+    outline: 0;
+    border: none;
+    outline-style: none;
+    -moz-outline-style: none;
+}
+
+h1{
+    font-size: 38px;
+    font-family: 'Gellix', sans-serif;
+    font-weight: 600;
+    color: $white;
+    margin: 0px;
+}
+
+h2{
+    font-size: 20px;
+    font-family: 'Gellix', sans-serif;
+    font-weight: 500;
+    margin: 0px;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+}
+
+h3{
+    font-size: 17px;
+    font-family: 'Gellix', sans-serif;
+    font-weight: 500;
+    margin: 0px;
+}
+
+p{
+    font-size: 16px;
+    font-family: 'Gellix', sans-serif;
+    font-weight: 500;
+    margin: 0px;
+    padding-bottom: 30px;
+}
+
+@media only screen and (min-width: $breakpointMedium){
+    h1{
+        font-size: 58px;
+    }
+
+    h2{
+        font-size: 24px;
+    }
+}
+
+@media only screen and (min-width: $breakpointXLarge){
+    p{
+        font-size: 20px;
+        padding-bottom: 50px; 
+    }
+}
+
+*:focus {
+    outline: none !important;
+}
+
+// * {
+//     cursor: none;
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+//   }

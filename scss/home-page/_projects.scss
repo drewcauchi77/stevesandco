@@ -1,0 +1,55 @@
+.homepage-main{
+    .projects-section{
+        background-color: $black;
+        .projects-container{
+            .projects-title{
+                color: $white;
+                &:before{
+                    border-bottom: 2px solid $white;
+                }
+            }
+            .projects-button{
+                a{
+                    color: $white;
+                    .arrow-right{
+                        border: solid $white;
+                        border-width: 0 2px 2px 0;
+                    }
+                    &:before{
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: $breakpointMedium){
+    .homepage-main{
+        .projects-section{
+            background-color: $black;
+            .projects-container{
+                .projects-title{
+                    color: $white;
+                    &:before{
+                        border-bottom: 2px solid $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointLarge){
+    .homepage-main{
+        .projects-section{
+            background-color: $black;
+            .projects-container{
+                .projects-title{
+                    margin-bottom: 80px;
+                }
+            }
+        }
+    }
+}

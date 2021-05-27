@@ -1,0 +1,50 @@
+.projects-main{
+    .project-list-section{
+        background-color: $white;
+        .project-list-container{
+            .projects-list{
+                .single-project{
+                    .single-project-link{
+                        .single-project-details{
+                            .inner-details-container{
+                                .single-project-title{
+                                    color: $black;
+                                }
+                                .single-project-button{
+                                    .arrow-right{
+                                        border-color: $black;
+                                    }
+                                    &:before{
+                                        background-color: $black;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointLarge){
+    .projects-main{
+        .project-list-section{
+            .project-list-container{
+                .projects-list{
+                    .single-project{
+                        .single-project-link{
+                            .single-project-details{
+                                .inner-details-container{
+                                    .single-project-title{
+                                        color: $white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

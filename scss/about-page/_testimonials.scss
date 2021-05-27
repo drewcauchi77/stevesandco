@@ -1,0 +1,136 @@
+.about-main{
+    .testimonials-section{
+        background-color: $black;
+        position: relative;
+        .testimonials-image-container{
+            display: none;
+        }
+        .testimonials-container{
+            .outer-slider-container{
+                .testimonials-content-slider{
+                    color: $white;
+                    padding: 40px 0px;
+                    .slick-list{
+                        .slick-track{
+                            .slick-slide{
+                                outline: none;
+                            }
+                        }
+                    }
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        width: 175px;
+                        height: 4px;
+                        left: 0;
+                        border-bottom: 2px solid #0048ff;
+                        transition: .5s all;
+                    }
+                }
+                .slider-navigation{
+                    display: grid;
+                    grid-template-columns: 150px 150px;
+                    grid-column-gap: 20px;
+                    margin: 0 auto;
+                    justify-content: center;
+                    .arrow-button{
+                        overflow: hidden;
+                        font-size: 16px;
+                        font-family: 'Gellix', sans-serif;
+                        font-weight: 500;
+                        color: $white;
+                        cursor: pointer;
+                        width: fit-content;
+                        .arrow-right{
+                            border: solid $white;
+                            border-width: 0 2px 2px 0;
+                            display: inline-block;
+                            padding: 3px;
+                            transform: rotate(-45deg);
+                            -webkit-transform: rotate(-45deg);
+                            margin-left: -12px;
+                            margin-right: 10px;
+                            text-decoration: none;
+                        }
+                        .button-text{
+                            display: none;
+                        }
+                        &:before{
+                            background-color: $white;
+                            content: "";
+                            display: inline-block;
+                            height: 2px;
+                            position: relative;
+                            vertical-align: middle;
+                            width: 50px;
+                            transition: 0.5s all;
+                        }
+                        &:hover{
+                            &:before{
+                                width: 75px;
+                            }
+                        }
+                    }
+                    .prev-button{
+                        transform: rotate(-180deg);
+                        -webkit-transform: rotate(-180deg);
+                        margin-top: 4px;
+                        justify-self: end;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointLarge){
+    .about-main{
+        .testimonials-section{
+            padding: 150px 0px;
+            .outer-images-container{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                margin: auto;
+                height: fit-content;
+                width: 30%;
+                .testimonials-image-container{
+                    display: block;
+                    .slick-list{
+                        .slick-track{
+                            img{
+                                height: 350px;
+                                object-fit: cover;
+                                outline: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .testimonials-container{
+                .outer-slider-container{
+                    width: 70%;
+                    margin-right: 0;
+                    margin-left: auto;
+                    .testimonials-content-slider{
+                        width: 100%;
+                        padding: 0px 0px 20px 30px;
+                        .slick-list{
+                            width: 100%;
+                        }
+                        &:before{
+                            height: 125px;
+                            width: 2px;
+                            border-right: 2px solid #0048ff;
+                        }
+                    }
+                    .slider-navigation{
+                        justify-content: end;
+                    }
+                }
+            }
+        }
+    }
+}

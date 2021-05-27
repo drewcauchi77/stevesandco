@@ -1,0 +1,81 @@
+.multiple-spacer-section{
+    background-color: $white;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    #image-slider{
+        cursor: grab;
+        &.grabbing{
+            cursor: grabbing;
+        }
+        .slick-list{
+            margin: 0px -4px;
+            .slick-track{
+                .slick-slide{
+                    outline: none;
+                    margin: 20px 4px;
+                    padding: 10px 0px;
+                    height: 400px;
+                    object-fit: cover;
+                }
+                .slick-current{
+                    padding: 0px;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: $breakpointLarge){
+    .multiple-spacer-section{
+        height: 880px;
+        #image-slider{
+            .slick-list{
+                margin: 0 -10px;
+                .slick-track{
+                    .slick-slide{
+                        margin: 40px 10px;
+                        height: 600px;
+                        padding: 40px 0px;
+                    }
+                    .slick-current{
+                        padding: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: $breakpointXLarge){
+    .multiple-spacer-section{
+        #image-slider{
+            .slick-list{
+                margin: 0 -20px;
+                .slick-track{
+                    .slick-slide{
+                        margin: 40px 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: $breakpointXXLarge){
+.multiple-spacer-section{
+        #image-slider{
+            .slick-list{
+                margin: 0 -40px;
+                .slick-track{
+                    .slick-slide{
+                        margin: 40px 40px;
+                    }
+                }
+            }
+        }
+    }
+}

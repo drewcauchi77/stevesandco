@@ -1,0 +1,18 @@
+.single-vacancy-main{
+    .description-section{
+        background-color: $white;
+        color: $black;
+    }
+}
+
+@media only screen and (min-width: $breakpointLarge){
+    .single-vacancy-main{
+        .description-section{
+            padding-bottom: 60px;
+            .description-container{
+                display: grid;
+                grid-template-columns: 0.75fr 1.25fr;
+            }
+        }
+    }
+}

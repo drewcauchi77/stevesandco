@@ -1,0 +1,14 @@
+.single-post-main{
+    .introduction-section{
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 85vh;
+        img{
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

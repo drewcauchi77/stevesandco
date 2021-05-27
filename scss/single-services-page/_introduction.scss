@@ -1,0 +1,121 @@
+.single-service-main{
+    .introduction-section{
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        .introduction-outer-container{
+            background-color: $black;
+            .inner-section{
+                padding-top: 110px;
+                height: 75vh;
+                .introduction-container{
+                    height: 100%;
+                    position: relative;
+                    .introduction-content{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        height: fit-content;
+                        .go-back{
+                            .back-button{
+                                overflow: hidden;
+                                font-size: 16px;
+                                font-family: 'Gellix', sans-serif;
+                                font-weight: 500;
+                                color: $blue;
+                                display: inline-block;
+                                position: relative;
+                                top: 10px;
+                                transform: rotate(180deg);
+                                left: -15px;
+                                .arrow-right{
+                                    border: solid $white;
+                                    border-width: 0 2px 2px 0;
+                                    display: inline-block;
+                                    padding: 3px;
+                                    transform: rotate(-45deg);
+                                    -webkit-transform: rotate(-45deg);
+                                    margin-left: -12px;
+                                    margin-right: 10px;
+                                    text-decoration: none;
+                                }
+                                &:before{
+                                    background-color: $white;
+                                    content: "";
+                                    display: inline-block;
+                                    height: 2px;
+                                    position: relative;
+                                    vertical-align: middle;
+                                    width: 25px;
+                                    transition: 0.5s all;
+                                }
+                            }
+                        }
+                        .section-title{
+                            margin-bottom: 20px;
+                            color: $white;
+                            &:before{
+                                border-color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    
+}
+
+
+
+@media only screen and (min-width: $breakpointMedium){
+    .single-service-main{
+        .introduction-section{
+            .introduction-outer-container{
+                .inner-section{
+                    .introduction-container{
+                        .introduction-content{
+                            .section-title{
+                                margin-bottom: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointLarge){
+    .single-service-main{
+        .introduction-section{
+            .introduction-outer-container{
+                .inner-section{
+                    .introduction-container{
+                        .introduction-content{
+                            .go-back{
+                                position: relative;
+                                .back-button{
+                                    position: absolute;
+                                    top: 0;
+                                    bottom: 0;
+                                    left: -75px;
+                                    margin: auto;
+                                    height: fit-content;
+                                    &:before{
+                                        width: 45px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

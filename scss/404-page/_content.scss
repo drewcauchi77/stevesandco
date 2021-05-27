@@ -1,0 +1,62 @@
+.not-found-main{
+    .introduction-section{
+        background-color: $black;
+        height: 100vh;
+        background-position: 250px -100px, 950px -350px, -150px 550px, 1350px 650px;
+	    background-repeat: no-repeat;
+        background-attachment: fixed;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        .introduction-outer-container{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            height: fit-content;
+            text-align: center;
+            .inner-section{
+                .introduction-container{
+                    .introduction-content{
+                        .section-title{
+                            color: $white;
+                            &:before{
+                                width: 100%;
+                                border-color: $white;
+                            }
+                        }
+                        .title{
+                            margin-bottom: 35px;
+                        }
+                        .projects-button{
+                            padding-left: calc(50% - 92.5px);
+                            width: fit-content;
+                            color: $white;
+                            a{
+                                color: $white;
+                                .arrow-right{
+                                    border-color: $white;
+                                }
+                                &:before{
+                                    background-color: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.error404{
+    #page{
+        footer{
+            top: 100vh;
+        }
+    }
+}

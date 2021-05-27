@@ -1,0 +1,86 @@
+// npm install -g sass
+// cd .\wp-content\themes\steves_co\ 
+// sass --watch scss/main.scss:style.css --style compressed
+
+@import "general/normalise";
+@import "general/variables";
+@import "general/classes";
+@import "general/keyframes";
+
+@import "partials/header";
+@import "partials/footer";
+@import "partials/general";
+@import "partials/scrollbar";
+@import "partials/cursor";
+@import "partials/multiple-image-spacer";
+@import "partials/showreel-navigation";
+
+// Home Page Styling by ACF Sections
+@import "home-page/introduction";
+@import "home-page/about";
+@import "home-page/projects";
+@import "home-page/clients";
+
+// About Page Styling by ACF Sections
+@import "about-page/introduction";
+@import "about-page/content";
+@import "about-page/testimonials";
+@import "about-page/single-spacer";
+@import "about-page/clients";
+
+// Careers Page Styling by ACF Sections
+@import "careers-page/introduction";
+@import "careers-page/listings";
+@import "careers-page/internship";
+
+// Single Vacancy Page Styling
+@import "single-vacancy-page/introduction";
+@import "single-vacancy-page/description";
+@import "single-vacancy-page/content";
+@import "single-vacancy-page/form";
+
+// Contact Page Styling by ACF Sections
+@import "contact-page/introduction";
+@import "contact-page/content";
+@import "contact-page/contact";
+
+// 404 Page Styling by ACF Sections
+@import "404-page/content";
+
+// Main News Page Styling
+@import "news-page/introduction";
+@import "news-page/featured";
+@import "news-page/listings";
+
+// Single News Page Styling
+@import "single-news-page/introduction";
+@import "single-news-page/content";
+
+// Main Projects Page Styling
+@import "projects-page/introduction";
+@import "projects-page/filters";
+@import "projects-page/listings";
+
+// Main Services Page Styling
+@import "services-page/introduction";
+@import "services-page/listings";
+
+// Privacy Page Styling
+@import "privacy-page/introduction";
+@import "privacy-page/content";
+
+
+// Single Project Page Styling
+@import "single-project-page/project-paragraph-sections";
+@import "single-project-page/project-video-images";
+@import "single-project-page/categories-section";
+@import "single-project-page/header-section";
+
+
+// Single Services Page 
+@import "single-services-page/introduction.scss";
+@import "single-services-page/project-section.scss";
+
+// Single Services Page 
+@import "single-taxonomy-page/introduction.scss";
+@import "single-taxonomy-page/project-section.scss";

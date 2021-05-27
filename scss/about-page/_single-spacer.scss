@@ -1,0 +1,9 @@
+.single-spacer-section{
+    background-color: $black;
+    height: 100vh;
+    .spacer-image{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}

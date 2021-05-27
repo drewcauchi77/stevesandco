@@ -1,0 +1,309 @@
+.projects-main{
+    .project-filters-section{
+        background-color: $white;
+        padding-bottom: 0px;
+        .project-filters-container{
+            .filter-toggle{
+                width: 110px;
+                height: 35px;
+                background-color: $blue;
+                position: relative;
+                cursor: pointer;
+                .filter-toggle-title{
+                    padding: 4px 8px;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    height: fit-content;
+                    width: fit-content;
+                    font-size: 16px;
+                    font-family: 'Gellix', sans-serif;
+                    font-weight: 500;
+                    color: $white;
+                }
+            }
+            .filtering-projects{
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: -300vw;
+                right: 0;
+                margin: auto;
+                height: 100vh;
+                width: 100%;
+                background-color: $white;
+                overflow-y: scroll;
+                transition: 0.5s all;
+                z-index: 991;
+                .filters-header{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    padding: 10px 7.5%;
+                    background-color: $black;
+                    position: sticky;
+                    top: 0;
+                    .go-back-filters{
+                        color: $white;
+                        width: fit-content;
+                        cursor: pointer;
+                        .back-button{
+                            overflow: hidden;
+                            font-size: 16px;
+                            font-family: 'Gellix', sans-serif;
+                            font-weight: 500;
+                            color: $white;
+                            display: inline-block;
+                            position: relative;
+                            top: 8px;
+                            transform: rotate(180deg);
+                            left: -10px;
+                            .arrow-right{
+                                border: solid $white;
+                                border-width: 0 2px 2px 0;
+                                display: inline-block;
+                                padding: 3px;
+                                transform: rotate(-45deg);
+                                -webkit-transform: rotate(-45deg);
+                                margin-left: -12px;
+                                margin-right: 10px;
+                                text-decoration: none;
+                            }
+                            &:before{
+                                background-color: $white;
+                                content: "";
+                                display: inline-block;
+                                height: 2px;
+                                position: relative;
+                                vertical-align: middle;
+                                width: 25px;
+                                transition: 0.5s all;
+                            }
+                        }
+                        .go-back-span{
+                            font-size: 18px;
+                            font-family: 'Gellix', sans-serif;
+                            font-weight: 500;
+                            color: $white;
+                        }
+                        &:hover{
+                            .go-back-span{
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                    .clear-filter{
+                        align-self: center;
+                        justify-self: end;
+                        font-size: 16px;
+                        font-family: 'Gellix', sans-serif;
+                        font-weight: 500;
+                        color: $white;
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+                form{
+                    padding: 10px 7.5%;
+                    fieldset{
+                        border: 0;
+                        padding: 20px 0px;
+                        border-bottom: 1px solid $black;
+                        .taxonomy-title{
+                            font-size: 20px;
+                            font-family: 'Gellix', sans-serif;
+                            font-weight: 500;
+                            margin: 0px;
+                            padding-bottom: 20px;
+                            display: block;
+                        }
+                        .project-taxonomy{
+                            position: relative;
+                            margin: 0px 15px 15px 0px;
+                            display: inline-block;
+                            input[type=checkbox]{
+                                position: absolute;
+                                width: 100%;
+                                top: 0;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                height: 100%;
+                                opacity: 0;
+                                z-index: 1;
+                                cursor: pointer;
+                            }
+                            label{
+                                display: block;
+                                padding: 8px 8px 8px 16px;
+                                border: 1px solid $black;
+                                font-size: 15px;
+                                font-family: 'Gellix', sans-serif;
+                                font-weight: 400;
+                                color: $black;
+                                transition: 0.5s all;
+                                &:before{
+                                    content: '';
+                                    display: inline-block;
+                                    width: 4px;
+                                    height: 4px;
+                                    -moz-border-radius: 7.5px;
+                                    -webkit-border-radius: 7.5px;
+                                    border-radius: 7.5px;
+                                    background-color: $black;
+                                    margin: 0;
+                                    position: absolute;
+                                    top: 50%;
+                                    -ms-transform: translateY(-50%);
+                                    transform: translateY(-50%);
+                                    left: 10px;
+                                    transition: 0.5s all;
+                                }
+                                &.selected{
+                                    border-color: $blue;
+                                    background-color: $blue;
+                                    color: $white;
+                                    &:before{
+                                        background-color: $white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .submit-button{
+                        border-bottom: none;
+                        position: sticky;
+                        bottom: 0;
+                        margin: 0px;
+                        background-color: $white;
+                        padding: 10px 0px;
+                        z-index: 2;
+                        button{
+                            width: 100%;
+                            background-color: $black;
+                            border-radius: none;
+                            border: 1px solid $black;
+                            color: $white;
+                            height: 50px;
+                            font-size: 16px;
+                            font-family: 'Gellix', sans-serif;
+                            font-weight: 500;
+                            cursor: pointer;
+                            max-width: 350px;
+                            margin: 0 auto;
+                            display: block;
+                            transition: 0.5s all;
+                            &:hover{
+                                background-color: $blue;
+                                border-color: $blue;
+                            }
+                        }
+                    }
+                }
+                &.open{
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointMedium){
+    .projects-main{
+        .project-filters-section{
+            .project-filters-container{
+                .filter-toggle{
+                    display: none;
+                }
+                .filtering-projects{
+                    position: relative;
+                    top: inherit;
+                    bottom: inherit;
+                    left: inherit;
+                    right: inherit;
+                    height: auto;
+                    overflow-y: hidden;
+                    z-index: auto;
+                    .filters-header{
+                        display: none;
+                    }
+
+                    form{
+                        padding: 0px;
+                        fieldset{
+                            .taxonomy-title{
+                                font-size: 24px;
+                            }
+                            .project-taxonomy{
+                                &:hover{
+                                    label{
+                                        border-color: $blue;
+                                        color: $blue;
+                                        &:before{
+                                            background-color: $blue;
+                                        }
+                                    }
+
+                                    .selected{
+                                        color: $white;
+                                            &::before{
+                                                background-color: $white;
+                                            }
+                                    }
+                                }
+                            }
+                        }
+                        .submit-button{
+                            padding-top: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+ .lds-ring {
+    display: none;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    
+    div {
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        width: 45px;
+        height: 45px;
+        margin: 8px;
+        border: 8px solid $blue;
+        border-radius: 50%;
+        animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        border-color: $blue transparent transparent transparent;
+    }
+    div:nth-child(1) {
+        animation-delay: -0.45s;
+    }
+    div:nth-child(2) {
+        animation-delay: -0.3s;
+    }
+    div:nth-child(3) {
+        animation-delay: -0.15s;
+    }
+    @keyframes lds-ring {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}

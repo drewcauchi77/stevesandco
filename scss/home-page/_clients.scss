@@ -1,0 +1,44 @@
+.homepage-main{
+    .clients-section{
+        background-color: $white;
+        .clients-container{
+            .clients-title{
+                color: $black;
+            }
+            .clients-text{
+                color: $black;
+            }
+        }
+        .first-row{
+            .image-slideshow-row{
+                animation: marqueeToLeft 40s linear infinite;
+            }
+        }
+        .second-row{
+            .image-slideshow-row{
+                animation: marqueeToRight 40s linear infinite;
+            }
+        }
+        .infinite-slideshow-gallery{
+            &:after{
+                background: linear-gradient(to right, $white, rgba($white, 0) 40px, rgba($white, 0) calc(100% - 40px), $white);
+            }
+            &:hover{
+                .image-slideshow-row{
+                    animation-play-state: paused;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointLarge){
+    .homepage-main{
+        .clients-section{
+            .clients-container{
+                display: grid;
+                grid-template-columns: 0.6fr 1.4fr;
+            }
+        }
+    }
+}

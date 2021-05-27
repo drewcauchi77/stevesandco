@@ -1,0 +1,18 @@
+.project-images-videos-section{
+    background: $white;
+
+    .media-section{
+        max-width: 85%;
+        margin: 0 auto 100px;
+        text-align: center;
+       
+
+        @media only screen and (min-width: $breakpointXXLarge){
+             max-width: 1364px;
+        }
+
+        video{
+            width: 100%;
+        }
+    }
+}
